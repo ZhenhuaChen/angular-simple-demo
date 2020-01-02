@@ -1,0 +1,21 @@
+.home{
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    margin-top: -200px;
+    width: 100%;
+}
+.icon-buying{
+    font-size: 3rem;
+}
+.home-enter-btn{
+    background-color: #086daf;
+    width: 10rem;
+    height: 2.5rem;
+    color: #ffffff;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+    

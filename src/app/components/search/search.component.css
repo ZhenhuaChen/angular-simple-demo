@@ -1,0 +1,9 @@
+.search{
+    width: 400px;
+    margin: 20px auto;
+}
+input{
+    margin-bottom: 20px;
+    width: 300px;
+    height: 32px;
+}

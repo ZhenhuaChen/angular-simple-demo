@@ -1,0 +1,53 @@
+<div class="notice">
+    <p class="notice-header">   
+        Before we start 
+        <span class="notice-close">
+            <i class="iconfont icon-close notice-icon-close"></i>
+        </span>
+    </p>
+    <div class="notice-body">
+        <p class="notice-content-title">
+            Important Notice - Please read before Procedeing:
+        </p>
+        <div class="notice-content-wrap">
+            <p class="notice-content-first-line">
+                By typping "Continue":
+            </p>
+            <div class="notice-content">
+                Have you looked for sales, coupons or generic versions? 
+                There’s no point in paying more than you have to.
+                Taking the time to research also can prevent impulse purchases that you may regret. 
+                However, a sale price isn’t always a reason to buy now. 
+                The discount might not be worth it if the purchase will throw off your spending plan or put you in debt
+            </div>
+            <div class="notice-content">
+                Could your money be better spend on meeting an immediate need? 
+                Buying stuff you want isn’t necessarily a bad thing, 
+                but it shouldn’t come at the expense of something you truly need today
+            </div>
+            <div class="notice-content">
+                Bring the Should I Buy This? 
+                decision map with you or pull it up on your phone the next time you 
+                go shopping and start retraining your brain to think about every purchase before you make it. 
+                With simple yes/no answers to every question, you’ll be able to work through spending decisions with ease
+            </div>
+            <div class="notice-content-document-list">
+                <p  *ngFor="let item of documentList">
+                    <a [href]="item.url" download class="notice-document-download-bar">
+                        <i class="iconfont icon-ic_picture_as_pdf"></i>
+                        {{item.name}}
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="notice-footer">
+            <a routerLink='/help'>
+                <button class="notice-next-btn">Ok</button>
+            </a>
+            <!-- 路由传参数 -->
+            <!-- <a [routerLink]="[ '/help']" [queryParams] = "{name:'zhangsan'}">name</a> -->
+            <p class="notice-next-never-tip">Noted, never show this again</p>
+        </div>
+    </div>
+</div>
+

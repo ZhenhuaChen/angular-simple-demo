@@ -1,0 +1,26 @@
+<div class="help">
+    <p class="help-header">   
+        <span class="help-done">
+            Done
+        </span>
+    </p>
+    <div class="notice-body">
+        <p class="notice-content-title">
+            Frequently Asked
+        </p>
+        <div id="accordionExample">
+            <div *ngFor="let item of frequentlyQuestion;let key = index">
+                <div  [id]="'help-question'+ key">
+                    <p class="help-qustion-item" data-toggle="collapse" attr.data-target="{{'#collapse'+key}}"  aria-expanded="true" attr.aria-controls="{{'collapse'+key}}">
+                        {{item.title}}
+                    </p>
+                </div>
+                <div [id]="'collapse'+key" [ngClass]="{'show': key==0 ? true:false,'collapse':true}"  attr.aria-labelledby="{{'help-question'+key}}" data-parent="#accordionExample">
+                    <div>
+                        {{item.value}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

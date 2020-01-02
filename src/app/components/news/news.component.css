@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+.people-list{
+    width:400px;
+    margin: 40px auto;
+    padding:20px;
+    border: 1px solid #eeeeee;
+}
+li{
+    height: 50px;
+    line-height: 50px;
+}
+input.username{
+    width: 250px;
+    height: 40px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+.sex-radio{
+    margin-right: 20px;
+}

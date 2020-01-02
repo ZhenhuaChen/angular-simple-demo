@@ -1,0 +1,32 @@
+<h1>表单:人员登记系统</h1>
+<!-- 双向数据绑定 获取表单数据 -->
+<div class="people-list">
+    <ul>
+        <li>姓名：<input type="text" [(ngModel)]="userInfo.name" class="username"></li>
+        <li>性别：
+            <input type="radio" value="1" name="sex" id="sex1" [(ngModel)]="userInfo.sex"><label for="sex1" class="sex-radio">男</label>
+            <input type="radio" value="2" name="sex" id="sex2" [(ngModel)]="userInfo.sex"><label for="sex2" class="sex-radio">女</label>
+        </li>
+        <li>
+            城市：
+            <select name="city" id="city" [(ngModel)]="userInfo.city">
+                <option [value]="item" *ngFor="let item of userInfo.cityList">{{item}}</option>
+            </select>
+        </li>
+        <li>
+            爱好：
+            <span *ngFor="let item of userInfo.hobby;let key=index">
+                <input type="checkbox" [id]="'check'+key" [(ngModel)]="item.checked" /> <label [for]="'check'+key">{{item.title}}</label> 
+            </span>
+        </li>
+        <li>
+            备注：
+            <textarea name="mark" id="" cols="30" rows="2" [(ngModel)]="userInfo.mark"></textarea>
+        </li>
+    </ul>
+    <p>{{userInfo | json}}</p>
+    <button (click)="doSubmit()"> 获取表单事件</button>
+
+</div>
+
+    
