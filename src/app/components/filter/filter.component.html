@@ -1,1 +1,70 @@
-<p>filter works!</p>
+<div class="filter">
+    <p class="filter-header">
+        <span>Clear All</span>
+        Filter
+        <span>Cancel</span>
+    </p>
+    <div class="filter-info-panel filter-first">
+        Show Citi Premier Funds first
+        <div class="choose-btn-wrap">
+            <input type="checkbox" name="sex" id="male" class="chooseBtn" />
+            <label for="male" class="choose-label"></label>
+        </div>
+    </div>
+    <div class="filter-info-panel">
+        <div class="filter-select-item" *ngFor="let item of chooseItem">
+            <div class="filter-select-title">
+                <p>{{item}}</p>
+                <p class="choosed-item">All</p>
+            </div>
+            <span class="filter-open-panel-icon">
+                <i class="iconfont icon-rightarrow"></i>
+            </span>
+        </div>
+    </div>
+    <div class="filter-info-panel">
+        <div class="filter-select-item" (click)="showCheckpanel = !showCheckpanel">
+            <div class="filter-select-title">
+                <p>Fund Types</p>
+                <p *ngIf="!showCheckpanel" class="choosed-item">All</p>
+            </div>
+            <span class="filter-open-panel-icon">
+                <i class="iconfont icon-rightarrow"></i>
+            </span>
+        </div>
+        <div class="testDivTable" *ngIf="showCheckpanel">       
+            <div *ngFor="let item of filrterKeyword">                   
+                <div *ngFor="let subitem of item">               
+                    <span class="div-table-cell">{{subitem}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filter-info-panel">
+        <p class="filter-info-title">Fund Types</p>
+        <div>
+
+            
+
+
+
+        </div>
+
+
+
+    </div>
+    <div class="filter-info-panel">
+
+    </div>
+    <div class="filter-info-panel">
+
+    </div>
+    <div class="filter-info-panel">
+
+    </div>
+    <div class="filter-footer">
+        <a routerLink='/help'>
+            <button class="common-confirm-btn">Compare Funds</button>
+        </a>
+    </div>
+</div>

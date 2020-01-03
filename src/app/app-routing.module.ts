@@ -6,6 +6,7 @@ import { SearchComponent } from './components/search/search.component';
 import { NoticeComponent } from './components/notice/notice.component';
 import { HelpComponent } from './components/help/help.component'
 import { ProductComponent } from './components/product/product.component'
+import { FilterComponent } from './components/filter/filter.component'
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'search',component:SearchComponent},
   {path:'help',component:HelpComponent},
   {path:'product',component:ProductComponent},
+  {path:'filter',component:FilterComponent},
   {path:'**',redirectTo:'home'},
 ];
 
