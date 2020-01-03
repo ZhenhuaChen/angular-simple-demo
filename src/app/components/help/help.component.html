@@ -9,14 +9,15 @@
             Frequently Asked
         </p>
         <div id="accordionExample">
-            <div *ngFor="let item of frequentlyQuestion;let key = index">
+            <div *ngFor="let item of frequentlyQuestion;let key = index" class="help-question-wrap">
                 <div  [id]="'help-question'+ key">
-                    <p class="help-qustion-item" data-toggle="collapse" attr.data-target="{{'#collapse'+key}}"  aria-expanded="true" attr.aria-controls="{{'collapse'+key}}">
+                    <p class="help-qustion-item" data-toggle="collapse" attr.data-target="{{'#collapse'+key}}"  attr.aria-expanded="{{key == 0 ? true:false}}" attr.aria-controls="{{'collapse'+key}}">
                         {{item.title}}
+                        <span class="help-qustion-hide">Hide</span>
                     </p>
                 </div>
                 <div [id]="'collapse'+key" [ngClass]="{'show': key==0 ? true:false,'collapse':true}"  attr.aria-labelledby="{{'help-question'+key}}" data-parent="#accordionExample">
-                    <div>
+                    <div class="collapse-content">
                         {{item.value}}
                     </div>
                 </div>

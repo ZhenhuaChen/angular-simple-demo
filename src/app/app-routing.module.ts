@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { NoticeComponent } from './components/notice/notice.component';
 import { HelpComponent } from './components/help/help.component'
+import { ProductComponent } from './components/product/product.component'
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'news',component:NewsComponent},
   {path:'search',component:SearchComponent},
   {path:'help',component:HelpComponent},
+  {path:'product',component:ProductComponent},
   {path:'**',redirectTo:'home'},
 ];
 

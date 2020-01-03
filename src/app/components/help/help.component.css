@@ -1,3 +1,42 @@
 .help{
     padding: 1rem ;
 }
+.help-header{
+    text-align: right;
+}
+.help-done{
+    font-size: 1.1rem;
+    line-height: 2rem;
+    color: #236689;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+.notice-content-title{
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+.help-qustion-item{
+    font-size: 1rem;
+    cursor: pointer;
+}
+p[aria-expanded=false]{
+    color:#236689;
+}
+p[aria-expanded=false] > span{
+    display: none;
+}
+.help-qustion-hide{
+    color:#236689;
+    float: right;
+    font-size: 0.8rem;
+}
+.help-question-wrap{
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 1rem;
+
+}
+.collapse-content{
+    padding-bottom: 1.2rem;
+}

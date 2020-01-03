@@ -17,7 +17,7 @@ export class HelpComponent implements OnInit {
       value:'To add accordion-like group management to a collapsible area, add the data attribute data-parent="#selector". Refer to the demo to see this in action'
     },
     {
-      titlle:'What are the main benefits',
+      title:'What are the main benefits',
       value:'If parent is provided, then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior - this is dependent on the card class). The attribute has to be set on the target collapsible area'
     },
     {

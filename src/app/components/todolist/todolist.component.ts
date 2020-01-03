@@ -17,7 +17,7 @@ export class TodolistComponent implements OnInit {
   constructor( public storage:StorageService) {
     console.log("看一下this的指向")
     console.log(this.saveStorageData)
-    this.saveStorageData = this.storage.get()
+    this.saveStorageData = this.storage.get('name')
     
   }
   doAdd(e){

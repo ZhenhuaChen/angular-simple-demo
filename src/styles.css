@@ -5,5 +5,17 @@ button{
     border: 1px solid transparent;
     outline: none;
 }
-
+p{
+    margin: 0;
+}
+.common-confirm-btn{
+    background-color: #086daf;
+    width: 100%;
+    border-radius: 0.4rem;
+    height:2.5rem;
+    line-height: 2.5rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 1rem 0;
+}
 /* compatible the PC and mobile */

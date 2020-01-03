@@ -18,11 +18,13 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 // 引入并且配置服务
 import { StorageService } from './services/storage.service';
 import { NoticeComponent } from './components/notice/notice.component';
-import { HelpComponent } from './components/help/help.component'
+import { HelpComponent } from './components/help/help.component';
+import { ProductComponent } from './components/product/product.component';
+import { FilterComponent } from './components/filter/filter.component'
 // @NgModule装饰器，@NgModule接收一个元数据对象，告诉Angular如何编译和启动应用
 @NgModule({
   declarations: [ /* 配置当前项目运行的组件*/ 
-    AppComponent, NewsComponent, HomeComponent, HeaderComponent, FooterComponent, SearchComponent, TodolistComponent, NoticeComponent, HelpComponent
+    AppComponent, NewsComponent, HomeComponent, HeaderComponent, FooterComponent, SearchComponent, TodolistComponent, NoticeComponent, HelpComponent, ProductComponent, FilterComponent
   ],
   imports: [ /* 配置当前模块运行依赖的其他模块 */
     BrowserModule,

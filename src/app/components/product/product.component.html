@@ -1,0 +1,48 @@
+<div>
+    <div class="product-disguies-header">
+        <span>
+            <i class="iconfont icon-back"></i>
+        </span>
+        Mutual Funds
+        <span>
+            <i class="iconfont icon-shuoming"></i>
+        </span>
+    </div>
+    <div class="product-filter-wrap">
+        <i class="iconfont icon-Search"></i>
+        <input type="text" class="product-filter" placeholder="Search and Filter" />
+    </div>
+    <div class="product-content">
+        <div class="product-sort-wrap">
+            <p class="product-current-item" (click)="showSelect = !showSelect">{{currentSelect == 1 ? 'Sort by name':'Sort by other' }} <span><i class="iconfont icon-xiala"></i> </span> </p>
+            <div class="choose-panel"  [ngStyle]="{'height':!showSelect ? '0px':'4rem'}">
+                <p>Sort by name <span [hidden]="currentSelect !=1" class="tick-site"><i class="iconfont icon-check"></i></span></p>
+                <p>Sort by other <span [hidden]="currentSelect != 2"  class="tick-site"><i class="iconfont icon-check"></i></span></p>
+            </div>
+        </div>
+        <div class="product-list" *ngFor="let item of productList">
+            <p class="product-item-name">
+                {{item.name}}
+                <span class="product-item-show-detail">
+                    <i class="iconfont icon-rightarrow"></i>
+                </span>
+            </p>
+            <div class="product-item-info">
+                {{item.cycle}}
+                <span>{{item.rate}}</span>
+            </div>
+            <div class="product-item-info">
+                Risk rating
+                <span>3 -Moderate</span>
+            </div>
+            <p class="product-item-footer">
+                <span>PREMIER FUND</span>
+            </p>
+        </div>
+    </div>
+    <div class="product-footer">
+        <a routerLink='/help'>
+            <button class="common-confirm-btn">Compare Funds</button>
+        </a>
+    </div>
+</div>
