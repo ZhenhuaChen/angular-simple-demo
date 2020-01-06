@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
+import { ActivatedRoute, RouterLink, Router } from '@angular/router'
 
 @Component({
   selector: 'app-help',
@@ -30,7 +30,7 @@ export class HelpComponent implements OnInit {
     }
   ]
 
-  constructor(public route:ActivatedRoute) {
+  constructor(public route:ActivatedRoute,public router:Router) {
 
   }
 
@@ -38,8 +38,15 @@ export class HelpComponent implements OnInit {
     console.log("打印一下，看一下路由infomation")
     this.route.queryParams.subscribe((data)=>{
       console.log(data)
-
     })
+    console.log("222")
+    this.route.url.subscribe((data) => {
+      console.log(data)
+    })
+  }
+  goNext(){
+    console.log("dianjilema ")
+    this.router.navigateByUrl('product')
   }
 
 }

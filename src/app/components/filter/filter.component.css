@@ -4,8 +4,33 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
+    font-family: 'PingFangSC-Semibold,PingFangSC-Regular,Avenir,Helvetica,Arial,sans-serif';
     background: #f0f0f0;
+    overflow: scroll;
 }
+.filter-header{
+    height: 2rem;
+    line-height: 2rem;
+    font-weight: 900;
+    text-align: center;
+    color: #0d2b73;
+    background-color: #ffffff;
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+}
+.filter-header-clear{
+    color: #236689;
+    font-size: 0.8rem;
+    float: left;
+    cursor: pointer;
+}
+.filter-header-cancel{
+    color: #236689;
+    font-size: 0.8rem;
+    float: right;
+    cursor: pointer;
+}
+
 .filter-footer{
     padding:0 0.5rem;
     position: fixed;
@@ -85,6 +110,7 @@
 .testDivTable{
     display: table;
     width:100%;
+    margin: 0.5rem 0;
 }
 .testDivTable > div{
     display: table-row
@@ -92,6 +118,7 @@
 .testDivTable > div > div{
     display: table-cell;
     padding-top: 0.5rem;
+    text-align: center;
 }
 .filter-select-title{
     display: inline-block;
@@ -117,11 +144,23 @@ span.div-table-cell{
     word-break: keep-all;
     text-align: center;
     height: 100%;
+    color:#acacac;
+    
 }
 .filter-open-panel-icon > i.icon-rightarrow{
     font-size: 1rem;
     vertical-align: text-top;
     color: #2a76bd;
 }
-    
+.filter-select-open{
+    border: none;
+    height: 1.5rem;
+}
+span.filter-checked{
+    background-color: #0d2b73;
+    color: #ffffff;
+}
+.filter-last-panel{
+    margin-bottom: 5rem;
+}
     

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, RouterLink, Router } from '@angular/router'
 
 @Component({
   selector: 'app-product',
@@ -34,9 +35,14 @@ export class ProductComponent implements OnInit {
       rate:'2.94%',
     },
   ]
-  constructor() { }
+  constructor(public route:ActivatedRoute,public router:Router) {
+
+  }
 
   ngOnInit() {
+  }
+  goBack(){
+    this.router.navigateByUrl('help')
   }
 
 }

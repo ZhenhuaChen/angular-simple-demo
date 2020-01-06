@@ -1,8 +1,8 @@
 <div class="filter">
     <p class="filter-header">
-        <span>Clear All</span>
+        <span class="filter-header-clear">Clear All</span>
         Filter
-        <span>Cancel</span>
+        <span class="filter-header-cancel">Cancel</span>
     </p>
     <div class="filter-info-panel filter-first">
         Show Citi Premier Funds first
@@ -23,44 +23,64 @@
         </div>
     </div>
     <div class="filter-info-panel">
-        <div class="filter-select-item" (click)="showCheckpanel = !showCheckpanel">
+        <div [ngClass]="{'filter-select-item': true,'filter-select-open':showCheckpanel ? true:false}" (click)="showCheckpanel = !showCheckpanel">
             <div class="filter-select-title">
                 <p>Fund Types</p>
                 <p *ngIf="!showCheckpanel" class="choosed-item">All</p>
             </div>
-            <span class="filter-open-panel-icon">
+            <span class="filter-open-panel-icon" *ngIf="!showCheckpanel">
                 <i class="iconfont icon-rightarrow"></i>
             </span>
         </div>
-        <div class="testDivTable" *ngIf="showCheckpanel">       
-            <div *ngFor="let item of filrterKeyword">                   
-                <div *ngFor="let subitem of item">               
-                    <span class="div-table-cell">{{subitem}}</span>
+        <div class="testDivTable" *ngIf="showCheckpanel">
+            <ng-container *ngFor="let item of filrterKeyword;let key = index">
+                <div *ngIf="key == 0 || key%3==0">                   
+                    <div *ngFor="let n of [1,2,3]">               
+                        <span [ngClass]="{'div-table-cell': true,'filter-checked':filrterKeyword[key+n-1].checked ? true:false}" (click)="selectItem(filrterKeyword[key+n-1])">{{filrterKeyword[key+n-1].label}}</span>
+                    </div>
                 </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="filter-info-panel">
+        <div [ngClass]="{'filter-select-item': true,'filter-select-open':showCheckpanelSecond ? true:false}" (click)="showCheckpanelSecond = !showCheckpanelSecond">
+            <div class="filter-select-title">
+                <p>Currencies</p>
+                <p *ngIf="!showCheckpanelSecond" class="choosed-item">All</p>
             </div>
+            <span class="filter-open-panel-icon" *ngIf="!showCheckpanelSecond">
+                <i class="iconfont icon-rightarrow"></i>
+            </span>
+        </div>
+        <div class="testDivTable" *ngIf="showCheckpanelSecond">
+            <ng-container *ngFor="let item of currenciesList;let key = index">
+                <div *ngIf="key == 0 || key%3==0">                   
+                    <div *ngFor="let n of [1,2,3]">               
+                        <span [ngClass]="{'div-table-cell': true,'filter-checked':currenciesList[key+n-1].checked ? true:false}" (click)="selectCurrency(currenciesList[key+n-1])" *ngIf="key+n-1 < currenciesList.length">{{currenciesList[key+n-1].label}}</span>
+                    </div>
+                </div>
+            </ng-container>
         </div>
     </div>
-    <div class="filter-info-panel">
-        <p class="filter-info-title">Fund Types</p>
-        <div>
-
-            
-
-
-
+    <div class="filter-info-panel filter-last-panel">
+        <div [ngClass]="{'filter-select-item': true,'filter-select-open':showCheckpanelThird ? true:false}" (click)="showCheckpanelThird = !showCheckpanelThird">
+            <div class="filter-select-title">
+                <p>Distribution Types</p>
+                <p *ngIf="!showCheckpanelThird" class="choosed-item">All</p>
+            </div>
+            <span class="filter-open-panel-icon" *ngIf="!showCheckpanelThird">
+                <i class="iconfont icon-rightarrow"></i>
+            </span>
         </div>
-
-
-
-    </div>
-    <div class="filter-info-panel">
-
-    </div>
-    <div class="filter-info-panel">
-
-    </div>
-    <div class="filter-info-panel">
-
+        <div class="testDivTable" *ngIf="showCheckpanelThird">
+            <ng-container *ngFor="let item of distributionList;let key = index">
+                <div *ngIf="key == 0 || key%3==0">                   
+                    <div *ngFor="let n of [1,2,3]">               
+                        <span [ngClass]="{'div-table-cell': true,'filter-checked':distributionList[key+n-1].checked ? true:false}" (click)="selectCurrency(distributionList[key+n-1])" *ngIf="key+n-1 < distributionList.length">{{distributionList[key+n-1].label}}</span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
     </div>
     <div class="filter-footer">
         <a routerLink='/help'>
