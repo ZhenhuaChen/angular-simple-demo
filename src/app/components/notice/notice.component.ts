@@ -27,5 +27,8 @@ export class NoticeComponent implements OnInit {
 
   ngOnInit() {
   }
+//   after view onload
+  ngAfterViewInit(): void {
+  }
 
 }

@@ -112,3 +112,18 @@ i.icon-check{
     right: 0;
     background-color: #ffffff;
 }
+.common-icon-close{
+    padding-right: 0.5rem;
+}
+.product-filter-result{
+    background-color: #eeeeee;
+    text-align: center;
+    color: #236689;
+    line-height: 2rem;
+    height: 2rem;
+}
+.product-filter-result > span{
+    color: #949191;
+    position: absolute;
+    left: 0.5rem;
+}

@@ -1,18 +1,6 @@
 .notice{
     padding: 1rem;
 }
-.notice-header{
-    font-size: 1.2rem;
-    line-height: 2rem;
-    color: #385f8a;
-    text-align: center;
-    font-weight: 600;
-}
-.notice-icon-close{
-    font-size: 1.2rem;
-    float: right;
-    color: #2271c7;
-}
 .notice-content-title{
     font-size: 2rem;
     line-height: 2rem;

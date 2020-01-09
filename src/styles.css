@@ -1,4 +1,7 @@
 /* global styles */
+body{
+    font-family: 'PingFangSC-Semibold,PingFangSC-Regular,Avenir,Helvetica,Arial,sans-serif';
+}
 button{
     margin: 0;
     padding: 0;
@@ -18,4 +21,27 @@ p{
     font-weight: 500;
     margin: 1rem 0;
 }
+.common-header{
+    font-size: 1rem;
+    line-height: 2.5rem;
+    height: 2.5rem;
+    color: #385f8a;
+    text-align: center;
+    font-weight: 600;
+    padding:0px 0.5rem;
+}
+span.icon-back-wrap{
+    float: left;
+}
+.common-icon-close{
+    font-size: 1rem;
+    float: right;
+    color: #2271c7;
+}
 /* compatible the PC and mobile */
+
+
+body{
+    width: 100%;
+    overflow: hidden;
+}
