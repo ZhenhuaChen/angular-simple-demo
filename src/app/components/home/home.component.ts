@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
   }
 	run(){
 		alert("这是一个自定义方法")
+		
 	}
 	// 获取数据
 	getData(){

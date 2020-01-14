@@ -1,5 +1,5 @@
 import { Product } from './product'
-export const Products:Product[] = [
+export const Products:Product[]= [
     {
 		id:11,
         name:'AB FCP - AMERICAN INCOME PORTFOLIO AT-AUD(H)',

@@ -7,11 +7,9 @@ import { Component, OnInit, ViewChild} from '@angular/core';
 })
 export class NewsComponent implements OnInit {
   // 获取dom节点
-  @ViewChild('myBox') myBox:any;
 
 
   // 获取一个组件
-  @ViewChild('header') header:any;
 
   public userInfo:any={
     name:'',
@@ -51,17 +49,10 @@ export class NewsComponent implements OnInit {
 
 
   ngAfterViewInit(): void {
-    console.log("what is")
-    console.log(this.myBox)
-    this.myBox.nativeElement.style.width="100px"
-    this.myBox.nativeElement.style.height = "200px";
-    this.myBox.nativeElement.style.background='red'
-    console.log(this.myBox.nativeElement.innerHTML)
 
     
   }
   getChildRun(){
-    this.header.run();
   }
 
 }

@@ -1,10 +1,5 @@
 <div class="notice">
-    <p class="common-header">   
-        Before we start 
-        <span class="common-icon-close">
-            <i class="iconfont icon-close notice-icon-close"></i>
-        </span>
-    </p>
+    <app-header [title]="title" [showBack]="showBack" [showClose]="showClose" [closeCurrent]="closeCurrent" [goBack]="goback"></app-header>
     <div class="notice-body">
         <p class="notice-content-title">
             Important Notice - Please read before Procedeing:
@@ -50,4 +45,5 @@
         </div>
     </div>
 </div>
+
 

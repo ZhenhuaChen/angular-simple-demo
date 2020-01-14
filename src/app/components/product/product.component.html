@@ -1,5 +1,5 @@
 <div>
-    <div class="product-disguies-header">
+    <div class="product-disguies-header" *ngIf="filterId != '1'">
         <span>
             <i class="iconfont icon-back" (click)="goBack()"></i>
         </span>
@@ -8,17 +8,12 @@
             <i class="iconfont icon-shuoming"></i>
         </span>
     </div>
-    <div class="common-header">
-        Select up to 3 funds
-        <span class="common-icon-close">
-            <i class="iconfont icon-close"></i>
-        </span>
-    </div>
+    <app-header [title]="title" [showBack]="showBack" [showClose]="showClose" [closeCurrent]="closeCurrent" *ngIf="filterId === '1'"></app-header>
     <div class="product-filter-wrap">
         <i class="iconfont icon-Search"></i>
         <input type="text" class="product-filter" placeholder="Search and Filter" (focus)="goFilter()"  />
     </div>
-    <div class="product-filter-result">
+    <div class="product-filter-result" *ngIf="filterId === '1'">
         <span>20 results</span>
         1 filters
     </div>
@@ -31,11 +26,14 @@
             </div>
         </div>
         <div class="product-list" *ngFor="let item of productList,let key = index">
-            <input type="radio" [name]="'a'+key" [(ngModel)]="item.checked">
-            <div>
+
+            <div class="choice">
+                <label class="radio"><input type="radio" [name]="'a'+key" [value]="item.checked" (click)="chooseFund(item.id)"><i></i></label>
+            </div>
+            <div class="product-list-info">
                 <p class="product-item-name">
                     {{item.name}}
-                    <span class="product-item-show-detail">
+                    <span class="product-item-show-detail" *ngIf="filterId != '1'">
                         <i class="iconfont icon-rightarrow"></i>
                     </span>
                 </p>
@@ -54,7 +52,7 @@
             
         </div>
     </div>
-    <div class="product-footer">
+    <div class="product-footer" *ngIf="filterId != '1'">
         <a routerLink='/filter'>
             <button class="common-confirm-btn">Compare Funds</button>
         </a>

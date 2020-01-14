@@ -1,6 +1,7 @@
 /* global styles */
 body{
     font-family: 'PingFangSC-Semibold,PingFangSC-Regular,Avenir,Helvetica,Arial,sans-serif';
+    overflow-y: scroll;
 }
 button{
     margin: 0;
@@ -39,9 +40,3 @@ span.icon-back-wrap{
     color: #2271c7;
 }
 /* compatible the PC and mobile */
-
-
-body{
-    width: 100%;
-    overflow: hidden;
-}

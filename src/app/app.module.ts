@@ -21,12 +21,13 @@ import { NoticeComponent } from './components/notice/notice.component';
 import { HelpComponent } from './components/help/help.component';
 import { ProductComponent } from './components/product/product.component';
 import { FilterComponent } from './components/filter/filter.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { TransitionComponent } from './components/transition/transition.component'
+import { TransitionComponent } from './components/transition/transition.component';
+import { ChooseWayComponent } from './components/choose-way/choose-way.component';
+import { OrderComponent } from './components/order/order.component'
 // @NgModule装饰器，@NgModule接收一个元数据对象，告诉Angular如何编译和启动应用
 @NgModule({
   declarations: [ /* 配置当前项目运行的组件*/ 
-    AppComponent, NewsComponent, HomeComponent, HeaderComponent, FooterComponent, SearchComponent, TodolistComponent, NoticeComponent, HelpComponent, ProductComponent, FilterComponent, ProductListComponent, TransitionComponent
+    AppComponent, NewsComponent, HomeComponent, HeaderComponent, FooterComponent, SearchComponent, TodolistComponent, NoticeComponent, HelpComponent, ProductComponent, FilterComponent, TransitionComponent, ChooseWayComponent, OrderComponent
   ],
   imports: [ /* 配置当前模块运行依赖的其他模块 */
     BrowserModule,

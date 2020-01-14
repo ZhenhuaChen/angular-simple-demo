@@ -1,0 +1,21 @@
+
+<app-header title="" [showBack]="false" [showClose]="true" [closeCurrent]="closeCurrent"></app-header>
+<div class="choose-way">
+
+    <div class="choose-way-tip">
+        Which relationship would you like to invest from?
+    </div>
+    <div *ngFor="let item of counts" [ngClass]="{'choose-way-count': true,'choose-way-notcurrent':initCount != item.id}" >
+        <div class="choose-way-count-name">{{item.name}}</div>
+        <div class="choose-way-count-id" *ngIf="initCount == item.id">Mutual fund account{{item.id}}</div>
+    </div>
+    <div class="choose-way-risk">
+        Relationships not eligible to invest in a Risk Rating 3 fund：
+        <p class="choose-way-risk-fond">MX AXSXSXI YXSXIXUXAMS MX</p>
+        <p class="choose-way-risk-rate">Risk Rating 2 - Conservative</p>
+    </div>
+    <span class="choose-way-update-profile">Update risk profile</span>
+</div>
+<span class="choose-way-next" (click)="goNext()">
+    <i class="iconfont icon-dd-copy"></i>
+</span>

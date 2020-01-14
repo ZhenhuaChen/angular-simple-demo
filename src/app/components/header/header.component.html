@@ -1,9 +1,9 @@
 <p class="common-header">
-    <span class="icon-back-wrap">
-        <i class="iconfont icon-back" (click)="goBack()"></i>
+    <span class="icon-back-wrap" *ngIf="showBack">
+        <i class="iconfont icon-back" (click)="back()"></i>
     </span>
     {{title}}
-    <span class="common-icon-close">
+    <span class="common-icon-close" (click)="close()" *ngIf="showClose">
         <i class="iconfont icon-close notice-icon-close"></i>
     </span>
 </p>

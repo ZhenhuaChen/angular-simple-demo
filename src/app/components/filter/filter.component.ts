@@ -30,6 +30,7 @@ export class FilterComponent implements OnInit {
     label:'Money Market',
     checked:false
   }]
+  public routeParam:any = {filterId:1}
   public currenciesList:any[] =[
     {
       label:'All',

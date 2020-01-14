@@ -1,0 +1,58 @@
+.choose-way{
+    padding: 1rem 1.5rem;
+    color: #333333;
+}
+.choose-way-tip{
+    font-size: 1.3rem;
+}
+.choose-way-count{
+    padding: 1rem;
+    border:2px solid #6297b3;
+    border-radius: 4px;
+    margin-top: 1rem;
+    color: #0F7EB3;
+    font-weight: 900;
+    text-align: center;
+    cursor: pointer;
+}
+.choose-way-count-name{
+    font-size: 1rem;
+}
+.choose-way-risk{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+.choose-way-risk-fond{
+    color: #000000;
+    font-weight: 900;
+    padding-top: 0.5rem;
+}
+.choose-way-risk-rate{
+    font-size: 1rem;
+}
+span.choose-way-update-profile{
+    color: #0F7EB3;
+    font-weight: 900;
+    line-height: 2rem;
+}
+.choose-way-next{
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    height: 3rem;
+    line-height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color:#066CAE;
+    color: #ffffff;
+    text-align: center;
+}
+.choose-way-next > i.icon-dd-copy{
+    font-size:1.5rem;
+    cursor: pointer;
+}
+.choose-way-notcurrent{
+    color: #AFAFAF;
+    border-color: #AFAFAF;
+}
+

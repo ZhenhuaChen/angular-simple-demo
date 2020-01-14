@@ -1,0 +1,50 @@
+<app-header [title]="title" showBack=true showClose=true [closeCurrent]="closeCurrent" [goBack]="goback"></app-header>
+<div class="order-wrap">
+    <div class="order">
+        <div class="order-target-fund">
+            <span class="order-target-aid">You are investing in</span>
+            <p class="order-target-name">{{target_fund.name}}</p>
+            <span class="order-target-aid">One time investment today</span>
+            <p class="order-target-name">{{target_fund.price}}</p>
+        </div>
+        <div class="order-info">
+            <p>Order Date</p>
+            <p>这里是一个日期</p>
+            Trade will be complated within 3 working days
+        </div>
+        <div class="order-info">
+            <p class="order-aid-text">Investment mode</p>
+            <p class="order-info-important">One time</p>
+        </div>
+        <div class="order-info">
+            <p class="order-aid-text">From</p>
+            <p class="order-pay-account">{{account}}</p>
+        </div>
+    </div>
+    <div class="order">
+        <div class="order-info">
+            <p class="order-aid-text">AMOUNT DEBITED TODAY</p>
+            <p class="order-info-important">S$ 100.5</p>
+        </div>
+        <div class="order-info">
+            <p class="order-aid-text">Fee</p>
+            <p class="order-info-important">S$ 0.47</p>
+        </div>
+        <div class="order-info">
+            <p class="order-aid-text">GST</p>
+            <p class="order-info-important">S$ 0.03</p>
+        </div>
+    </div>
+    <div class="order">
+        <div class="order-info">
+            <p class="order-aid-text">Settle To</p>
+            <p class="order-info-important">这里放扣款账号</p>
+            <p class="order-aid-text">Dividend distribution - Cash</p>
+        </div>
+        <div class="order-info">
+            <p class="order-aid-text">Transaction Type</p>
+            <p class="order-info-important">Non-advised</p>
+        </div>
+    </div>
+</div>
+

@@ -8,11 +8,18 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
+  @Input() showClose:boolean
+  @Input() showBack: boolean
   @Input() title:string
+  @Input() closeCurrent:any
+  @Input() goBack:any
   ngOnInit() {
   }
-  run(){
-    console.log("what is your name")
+  close(){
+    this.closeCurrent()
+  }
+  back(){
+    this.goBack()
   }
 
 }
