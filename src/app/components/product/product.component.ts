@@ -1,6 +1,6 @@
 import { Component, OnInit, Input} from '@angular/core';
 import { ActivatedRoute, RouterLink, Router } from '@angular/router'
-import { Product } from '../../Product'
+import { Product } from '../../product'
 import { ProductService } from '../../services/product.service'
 import { StorageService }  from '../../services/storage.service'
 
@@ -10,7 +10,7 @@ import { StorageService }  from '../../services/storage.service'
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  public title:string='Select up to 3 funds'
+  public title:string='Select up to 4 funds'
   public showBack:boolean = false
   public showClose:boolean = true
   public showSelect:boolean=false

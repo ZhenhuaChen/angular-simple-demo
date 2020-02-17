@@ -11,9 +11,12 @@ export class OrderComponent implements OnInit {
   public target_fund:Object={
     name:'dfsw'
   }
+  public moblieContainer: HTMLDivElement = null
   public account:Object;
   constructor() { }
   ngOnInit() {
+    console.log("这是个啥")
+    console.log(this.moblieContainer)
     this.getFund()
   }
   getFund(){
